@@ -1,6 +1,6 @@
 import { Menu, Typography } from "antd";
 import React, { ReactNode, ReactPropTypes } from "react";
-import NavBar from "../NavBar";
+import NavBar from "../navbar/NavBar";
 
 const Flex = ({ children }: { children: JSX.Element[] | ReactNode }) => {
   return (

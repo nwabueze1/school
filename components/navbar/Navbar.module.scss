@@ -1,0 +1,107 @@
+$primary-color: rgb(12, 5, 114);
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 1px solid $primary-color;
+}
+.nav__logo {
+  margin: 0;
+  color: $primary-color;
+  font-size: 3rem;
+}
+
+.nav__button {
+  background-color: $primary-color;
+  padding: 3px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  transition: all 0.5s;
+  height: 45px;
+}
+.nav__active .nav__button {
+  box-shadow: -1px 4px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.nav__button:hover {
+  cursor: pointer;
+  background-color: lighten($primary-color, $amount: 5);
+}
+
+.nav__button span {
+  height: 3px;
+  width: 40px;
+  background-color: white;
+  display: block;
+  margin: 5px;
+}
+
+.nav__list {
+  list-style: none;
+  color: $primary-color;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-height: 0vh;
+  opacity: 0;
+  transition: all 0.5s;
+  padding-top: 0;
+}
+.nav__active .nav__list {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+.nav__list_item {
+  margin: 1rem 0;
+  transition: color 0.5s;
+}
+.nav__list_item:hover {
+  color: lighten($color: $primary-color, $amount: 15);
+}
+
+@media screen and (min-width: 765px) {
+  .nav__list {
+    list-style: none;
+    color: $primary-color;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    max-height: 100vh;
+    opacity: 1;
+    transition: all 0.5s;
+  }
+
+  .nav__list_item {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+
+  .nav__button {
+    display: none;
+  }
+  .button {
+    padding: 2rem;
+    text-align: center;
+    margin: 0 1rem;
+    background-color: $primary-color;
+    color: white;
+  }
+
+  .btn__primary {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  .btn__outlined {
+    background-color: white;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+  }
+}

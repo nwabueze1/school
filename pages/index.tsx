@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Collapsible from "../components/collapsible/Collapsible";
+import NavBar from "../components/navbar/NavBar";
+import Styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <Collapsible />
-    </div>
+    <main>
+      <Head>
+        <title>Home Page</title>
+      </Head>
+      <NavBar />
+    </main>
   );
 };
 
