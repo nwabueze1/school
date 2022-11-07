@@ -8,7 +8,7 @@ export default function NavBar() {
   const handleToggle = () => setActive(!active);
   return (
     <nav className={`${Styles.nav} ${active ? Styles.nav__active : ""}`}>
-      <h2 className={Styles.nav__logo}>AFS</h2>
+      <h2 className={Styles.nav__logo}>AFTS</h2>
       <div className={Styles.nav__button} onClick={handleToggle}>
         <span></span>
         <span></span>
