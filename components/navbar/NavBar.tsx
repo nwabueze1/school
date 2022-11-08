@@ -8,6 +8,7 @@ import NavListItem from "./NavListItem";
 import NavLogo from "./NavLogo";
 import NavToggler from "./NavToggler";
 import Button from "../button/Button";
+import Container from "../container/Container";
 export default function NavBar() {
   const [active, setActive] = useState(false);
 

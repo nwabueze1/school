@@ -11,7 +11,11 @@ const Home: NextPage = () => {
       <Head>
         <title>Home Page</title>
       </Head>
-      <Block variant="contained">
+      <Container>
+        <NavBar />
+      </Container>
+
+      <Block variant="normal">
         <Container>
           <h1>AFRICAN TECH SCHOOL</h1>
           <p>
