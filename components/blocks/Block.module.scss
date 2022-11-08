@@ -1,0 +1,14 @@
+$primary-color: rgb(12, 5, 114);
+
+.block {
+  padding: 10rem 4rem;
+}
+
+.block .block__heading {
+  margin-bottom: 0;
+  font-size: 5rem;
+}
+.block.contained {
+  background-color: $primary-color;
+  color: white;
+}
