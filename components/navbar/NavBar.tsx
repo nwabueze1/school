@@ -1,45 +1,41 @@
-import Link from "next/link";
 import React, { useState } from "react";
 import { pages } from "../utils/pages";
 import Styles from "./Navbar.module.scss";
+import NavLink from "./NavLink";
+import NavList from "./NavList";
+import NavListItem from "./NavListItem";
+import NavLogo from "./NavLogo";
+import NavToggler from "./NavToggler";
 export default function NavBar() {
   const [active, setActive] = useState(false);
 
   const handleToggle = () => setActive(!active);
   return (
     <nav className={`${Styles.nav} ${active ? Styles.nav__active : ""}`}>
-      <h2 className={Styles.nav__logo}>AFTS</h2>
-      <div className={Styles.nav__button} onClick={handleToggle}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul className={Styles.nav__list}>
-        <li className={Styles.nav__list_item}>
-          <Link href={pages.home}>Home</Link>
-        </li>
-        <li className={Styles.nav__list_item}>
-          <Link href={pages.about}>About</Link>
-        </li>
-        <li className={Styles.nav__list_item}>
-          <Link href={pages.students}>Students</Link>
-        </li>
-        <li className={Styles.nav__list_item}>
-          <Link href={pages.contact}>Contact</Link>
-        </li>
-      </ul>
-      <ul className={Styles.nav__list}>
-        <li className={Styles.nav__list_item}>
-          <Link href={pages.join} passHref>
-            <a href="" className={`${Styles.button} `}>
-              Join
-            </a>
-          </Link>
-        </li>
-        <li className={Styles.nav__list_item}>
-          <Link href={pages.login}>Login</Link>
-        </li>
-      </ul>
+      <NavLogo />
+      <NavToggler onClick={handleToggle} />
+      <NavList>
+        <NavListItem>
+          <NavLink href={pages.home}>Home</NavLink>
+        </NavListItem>
+        <NavListItem>
+          <NavLink href={pages.about}>About</NavLink>
+        </NavListItem>
+        <NavListItem>
+          <NavLink href={pages.students}>Students</NavLink>
+        </NavListItem>
+        <NavListItem>
+          <NavLink href={pages.contact}>Contact</NavLink>
+        </NavListItem>
+      </NavList>
+      <NavList>
+        <NavListItem>
+          <a href="" className={`${Styles.button} `}>
+            Join
+          </a>
+        </NavListItem>
+        <NavListItem>Login</NavListItem>
+      </NavList>
     </nav>
   );
 }
