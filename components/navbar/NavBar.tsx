@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { pages } from "../utils/pages";
 import Styles from "./Navbar.module.scss";
+import ButtonStyles from "../button/Button.module.scss";
 import NavLink from "./NavLink";
 import NavList from "./NavList";
 import NavListItem from "./NavListItem";
 import NavLogo from "./NavLogo";
 import NavToggler from "./NavToggler";
+import Button from "../button/Button";
 export default function NavBar() {
   const [active, setActive] = useState(false);
 
@@ -30,11 +32,11 @@ export default function NavBar() {
       </NavList>
       <NavList>
         <NavListItem>
-          <a href="" className={`${Styles.button} `}>
-            Join
-          </a>
+          <Button variant="contained">Join</Button>
         </NavListItem>
-        <NavListItem>Login</NavListItem>
+        <NavListItem>
+          <Button variant="outlined">Login</Button>
+        </NavListItem>
       </NavList>
     </nav>
   );

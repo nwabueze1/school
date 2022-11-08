@@ -1,0 +1,25 @@
+$primary-color: rgb(12, 5, 114);
+
+.button {
+  padding: 1.5rem 4rem;
+  width: max-content;
+  outline: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: white;
+}
+
+.button.outlined {
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  transition: all ease-in-out 0.3s;
+}
+.button.outlined:hover {
+  background-color: lighten($primary-color, 5);
+  color: white;
+}
+.button.contained {
+  background-color: $primary-color;
+  color: white;
+  transition: all ease-in-out 0.3s;
+}
