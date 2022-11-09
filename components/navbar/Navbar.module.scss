@@ -5,6 +5,7 @@ $primary-color: rgb(12, 5, 114);
   flex-wrap: wrap;
   padding: 5px;
   align-items: center;
+
   // border-bottom: 1px solid $primary-color;
 }
 .nav__logo {
@@ -23,6 +24,9 @@ $primary-color: rgb(12, 5, 114);
   border-radius: 5px;
   transition: all 0.5s;
   height: 45px;
+}
+.nav_toggler {
+  fill: white;
 }
 .nav__active .nav__button {
   box-shadow: -1px 4px 10px 0px rgba(0, 0, 0, 0.75);

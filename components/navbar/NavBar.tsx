@@ -14,31 +14,33 @@ export default function NavBar() {
 
   const handleToggle = () => setActive(!active);
   return (
-    <nav className={`${Styles.nav} ${active ? Styles.nav__active : ""}`}>
-      <NavLogo />
-      <NavToggler onClick={handleToggle} />
-      <NavList>
-        <NavListItem>
-          <NavLink href={pages.home}>Home</NavLink>
-        </NavListItem>
-        <NavListItem>
-          <NavLink href={pages.about}>About</NavLink>
-        </NavListItem>
-        <NavListItem>
-          <NavLink href={pages.students}>Students</NavLink>
-        </NavListItem>
-        <NavListItem>
-          <NavLink href={pages.contact}>Contact</NavLink>
-        </NavListItem>
-      </NavList>
-      <NavList>
-        <NavListItem>
-          <Button variant="contained">Join</Button>
-        </NavListItem>
-        <NavListItem>
-          <Button variant="outlined">Login</Button>
-        </NavListItem>
-      </NavList>
-    </nav>
+    <Container>
+      <nav className={`${Styles.nav} ${active ? Styles.nav__active : ""}`}>
+        <NavLogo />
+        <NavToggler onClick={handleToggle} />
+        <NavList>
+          <NavListItem>
+            <NavLink href={pages.home}>Home</NavLink>
+          </NavListItem>
+          <NavListItem>
+            <NavLink href={pages.about}>About</NavLink>
+          </NavListItem>
+          <NavListItem>
+            <NavLink href={pages.students}>Students</NavLink>
+          </NavListItem>
+          <NavListItem>
+            <NavLink href={pages.contact}>Contact</NavLink>
+          </NavListItem>
+        </NavList>
+        <NavList>
+          <NavListItem>
+            <Button variant="contained">Join</Button>
+          </NavListItem>
+          <NavListItem>
+            <Button variant="outlined">Login</Button>
+          </NavListItem>
+        </NavList>
+      </nav>
+    </Container>
   );
 }
